@@ -5,11 +5,34 @@
   align-items: center;
   flex-direction: column;
   flex-wrap: nowrap;
-  background-color: rgb(63, 15, 107);
+  
   border-radius: 20px;
   box-shadow: 5px 10px rgb(44, 66, 187);
   margin-top: 15px;
   
+}
+.navbar{
+  text-align: center;
+  background-color: blue;
+  color:white;
+  border-radius: 10px;
+}
+.navbar h3{
+  font-size: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 20px;
+
+}
+.navbar h4{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-large;
+  color:rgb(205, 222, 238);
+}
+.navbar h6{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  color:antiquewhite;
+  padding-bottom:20px;
 }
 .status{
   background-color: rgb(69, 34, 102);
@@ -54,4 +77,11 @@
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-weight: lighter;
   font-size: 15px;
+}
+.togglebutton{
+  padding:15px;
+  background-color:rgb(28, 8, 102);
+  border-radius:15px;
+  color:white;
+  font-size: xx-large;
 }

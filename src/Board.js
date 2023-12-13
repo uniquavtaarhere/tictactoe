@@ -7,6 +7,27 @@ function Board(){
       
     const [squares , setSquares] = useState(Array(9).fill(null));
     const [xIsNext , setXIsNext ]  = useState(true);
+    const [buttonValue , setbuttonValue] = useState("Enable Dark Mode");
+
+    const [style, setStyle] = useState({backgroundColor: 'rgb(63, 15, 107)'});
+    function toggleStyle(){
+      if(style.backgroundColor ==='rgb(63, 15, 107)' ){
+            setStyle({backgroundColor: 'black'})
+           
+            setbuttonValue("Enable Light Mode");
+
+      }
+      else {
+            setStyle({backgroundColor: 'rgb(63, 15, 107)'});
+            setbuttonValue("Enable Dark Mode");
+            
+      }
+                
+
+      
+    }
+        
+    
     function handleClick(i){
       if(calculateWinner(squares) || squares[i]){
             return;
@@ -43,12 +64,13 @@ function handleReset(){
 
 
     return <>  
-                  <div className="status"> <h2>TIC -TAE -TOE</h2>
+                  <div className="navbar" style={style}> <h3>TIC -TAE -TOE</h3>
                   <h4>Created by ASHISH MISHRA</h4>
+                  <button onClick={toggleStyle} className="togglebutton">{buttonValue} </button>
                   <h6>More updates are on the way ...Stay tuned.</h6>
                       </div>
-                  <div className="status">{status}</div>
-                  <div className="board-container"><div className="">
+                  <div className="status" style={style} >{status}</div>
+                  <div className="board-container" style={style}><div className="">
                         <Buttons  value={squares[0]} onSquareClick={() => handleClick(0)}/>
                         <Buttons value={squares[1]} onSquareClick = {() => handleClick(1)}/>
                         <Buttons value={squares[2]} onSquareClick = {() => handleClick(2)}/>
@@ -63,8 +85,9 @@ function handleReset(){
                        <Buttons  value={squares[7]} onSquareClick = {() => handleClick(7)}/>
                        <Buttons value={squares[8]}  onSquareClick = {() => handleClick(8)}/>
                  </div></div>
-                 <div className="buttons"> <button onClick = {handleReset}>Play Again </button></div>
-                 <div className="footer"> <footer>copyright@Ashishmishra</footer></div>
+                 <div className="buttons" style={style}> <button onClick = {handleReset}>Play Again </button></div>
+                 <div className="footer" style={style}> <footer>copyright@Ashishmishra</footer></div>
+                  
     
     
     
