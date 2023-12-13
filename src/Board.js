@@ -63,10 +63,12 @@ function handleReset(){
     
 
 
-    return <>  
-                  <div className="navbar" style={style}> <h3>TIC -TAE -TOE</h3>
+    return <> 
+
+                 <div className="navbar" style={style}> <h3>TIC -TAE -TOE</h3>
                   <h4>Created by ASHISH MISHRA</h4>
-                  <button onClick={toggleStyle} className="togglebutton">{buttonValue} </button>
+                  <button className="togglebutton" onClick={toggleStyle}>{buttonValue}</button>
+                 
                   <h6>More updates are on the way ...Stay tuned.</h6>
                       </div>
                   <div className="status" style={style} >{status}</div>
@@ -86,7 +88,11 @@ function handleReset(){
                        <Buttons value={squares[8]}  onSquareClick = {() => handleClick(8)}/>
                  </div></div>
                  <div className="buttons" style={style}> <button onClick = {handleReset}>Play Again </button></div>
-                 <div className="footer" style={style}> <footer>copyright@Ashishmishra</footer></div>
+                 
+                 <div className="form-check form-switch" onClick={toggleStyle}>
+  <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
+  <label className="form-check-label" for="flexSwitchCheckDefault">{buttonValue}</label></div>
+                 <div className="footer" style={style}> <footer>copyright@Ashishmishra</footer></div> 
                   
     
     
